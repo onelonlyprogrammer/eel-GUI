@@ -1,0 +1,10 @@
+.query{
+    display: flex;
+    margin-bottom: 7px
+}
+.query input{
+    height: 20px;
+}
+.query p{
+    margin: 3px 10px 0px 0px;
+}
