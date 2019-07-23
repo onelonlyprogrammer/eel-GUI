@@ -3,8 +3,8 @@ import eel
 eel.init("web")
 
 @eel.expose
-def tester():
-    print("hello")
-    return "hell0"
+def tester(date, team):
+    print(date + team)
+    return "got" + date + team
 
-eel.start('index.html')
+eel.start('index.html', size=(500, 250))
