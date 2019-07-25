@@ -13,8 +13,7 @@ function test() {
         //Tests crew input for proper value
         if (crew == "A" || crew == "a" || crew == "B" || crew == "b" || !crew) {
             //If both date and crew values pass the tests send to python
-            //eel.main(date, crew)(function (ret) {
-            /*for testing*/ eel.main(date, crew)(function (ret) {
+            eel.main(date, crew)(function (ret) {
                 console.log(ret);
             });
             info_box.style.color = "green";
