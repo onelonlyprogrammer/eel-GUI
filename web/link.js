@@ -17,15 +17,18 @@ function test() {
             /*for testing*/ eel.tester(date, crew)(function (ret) {
                 console.log(ret);
             });
+            info_box.style.color = "green";
             info_box.innerHTML = "Information entered successfully";
         }
         //Gives error if split_date fails any tests
         else {
+            info_box.style.color = "red";
             info_box.innerHTML = "Invalid crew. crew input field must be A B or blank";
         }
     }
     //Gives error if crew has incorrect value
     else {
+        info_box.style.color = "red";
         info_box.innerHTML = "Invalid date. Date input must be in YYYY-MM-DD format. Example: 2017-5-15";
     }
 }
