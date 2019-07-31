@@ -42,12 +42,13 @@ function addZero(n) {
             zero_count++;
         }
     }
-    //If zero_count exceeds one, notify user
+    //If zero_count exceeds one, notif user
     if (zero_count > 1) {
         console.log(zero_count > 1)
-        window.alert("Information entered, but too many zeros were added. We fixed it, but please remember to use the proper amount of zeros in the future.");
+        window.alert("Information entered, but too many zeros were added." +
+        "We fixed it, but please remember to use the proper amount of zeros in the future.");
     }
-    //Removes
+    //Changes string appropriately depending on the converted int value being greater or lesser then 10
     switch (parseInt(n) < 10){
         case true:
         n = n.replace(/0/g, "");
@@ -55,5 +56,6 @@ function addZero(n) {
         case false:
         n = n.replace(/0/g, "") + "0";
     }
+    //Adds zeros on strings with converted int value of lesser then 10
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
