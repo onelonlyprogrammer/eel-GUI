@@ -1,4 +1,3 @@
-
 function test() {  
     date = document.getElementById("Date_query").value;
     crew = document.getElementById("Crew_query").value;
@@ -42,7 +41,7 @@ function addZero(n) {
             zero_count++;
         }
     }
-    //If zero_count exceeds one, notif user
+    //If zero_count exceeds one, notifies user
     if (zero_count > 1) {
         console.log(zero_count > 1)
         window.alert("Information entered, but too many zeros were added." +
