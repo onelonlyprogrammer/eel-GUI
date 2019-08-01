@@ -44,16 +44,19 @@ function addZero(n) {
     //If zero_count exceeds one, notifies user
     if (zero_count > 1) {
         console.log(zero_count > 1)
-        window.alert("Information entered, but too many zeros were added." +
+        window.alert("Information entered, but too many zeros were added. " +
             "We fixed it, but please remember to use the proper amount of zeros in the future.");
     }
     //Changes string appropriately depending on the converted int value being greater or lesser then 10
     switch (parseInt(n)) {
         case 10:
+            n = n.replace(/0/g, "") + "0";
             return n;
         case 20:
+            n = n.replace(/0/g, "") + "0";
             return n;
         case 30:
+            n = n.replace(/0/g, "") + "0";
             return n;
     }
     n = n.replace(/0/g, "");
