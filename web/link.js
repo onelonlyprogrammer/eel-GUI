@@ -1,4 +1,4 @@
-function test() {  
+function test() {
     date = document.getElementById("Date_query").value;
     crew = document.getElementById("Crew_query").value;
     info_box = document.getElementById("info_box");
@@ -15,7 +15,7 @@ function test() {
             date = `${split_date[0]}-${addZero(split_date[1])}-${addZero(split_date[2])}`
             //If both date and crew values pass the tests send to python
             eel.main(date, crew)(function (ret) {
-                console.log(ret);
+                console.log(date);
             });
             info_box.style.color = "green";
             info_box.innerHTML = "Information entered successfully";
@@ -45,16 +45,18 @@ function addZero(n) {
     if (zero_count > 1) {
         console.log(zero_count > 1)
         window.alert("Information entered, but too many zeros were added." +
-        "We fixed it, but please remember to use the proper amount of zeros in the future.");
+            "We fixed it, but please remember to use the proper amount of zeros in the future.");
     }
     //Changes string appropriately depending on the converted int value being greater or lesser then 10
-    switch (parseInt(n) < 10){
-        case true:
-        n = n.replace(/0/g, "");
-
-        case false:
-        n = n.replace(/0/g, "") + "0";
+    switch (parseInt(n)) {
+        case 10:
+            return n;
+        case 20:
+            return n;
+        case 30:
+            return n;
     }
+    n = n.replace(/0/g, "");
     //Adds zeros on strings with converted int value of lesser then 10
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
