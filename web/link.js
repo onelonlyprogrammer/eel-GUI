@@ -14,7 +14,7 @@ function test() {
         if (crew == "A" || crew == "a" || crew == "B" || crew == "b" || !crew) {
             date = `${split_date[0]}-${addZero(split_date[1])}-${addZero(split_date[2])}`
             //If both date and crew values pass the tests send to python
-            eel.main(date, crew)(function (ret) {
+            eel.main(date, crew.toUpperCase())(function (ret) {
                 console.log(date);
             });
             info_box.style.color = "green";
