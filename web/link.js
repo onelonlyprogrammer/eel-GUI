@@ -23,7 +23,7 @@ function test() {
         //Gives error if split_date fails any tests
         else {
             info_box.style.color = "red";
-            info_box.innerHTML = "Invalid crew. crew input field must be A B or blank";
+            info_box.innerHTML = "Invalid crew. Crew input field must be A B or blank";
         }
     }
     //Gives error if crew has incorrect value
