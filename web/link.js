@@ -4,6 +4,9 @@ function test() {
     info_box = document.getElementById("info_box");
 
     //Splits date input and tests to see it's in proper format
+    date = date.replace(/,/g, "");
+    date = date.replace(/\./g, "");
+
     var split_date = date.split("-");
     if (split_date.length == 3
         && parseInt(split_date[0]) > 1000
@@ -47,7 +50,7 @@ function addZero(n) {
         window.alert("Information entered, but too many zeros were added. " +
             "We fixed it, but please remember to use the proper amount of zeros in the future.");
     }
-    //Changes string appropriately depending on the converted int value being greater or lesser then 10
+    //Changes string appropriately depending on the converted int value being a power of 10
     switch (parseInt(n)) {
         case 10:
             n = n.replace(/0/g, "") + "0";
